@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Nhóm Zalo &amp; Fanpage | Công ty Cổ phần Xuất Nhập Khẩu Cao Bằng</title>
+  <meta name="description" content="Vào nhóm Zalo gần nhất và theo dõi Fanpage của hệ thống Siêu thị &amp; Cửa hàng Tự chọn Công ty Cổ phần Xuất Nhập Khẩu Cao Bằng để săn deal sốc mỗi ngày." />
+  <meta name="theme-color" content="#0b7a3e" />
+
+  <!-- Phông chữ Inter sắc nét, hỗ trợ đầy đủ tiếng Việt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Cấu hình bộ màu thương hiệu XNK Cao Bằng, Zalo & Facebook -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              accent: '#68b82e',
+              500: '#22c55e',
+              600: '#15803d',
+              700: '#0b7a3e',
+              800: '#095e30',
+            },
+            zalo: {
+              DEFAULT: '#0068FF',
+              hover: '#0054CC',
+              light: '#EBF4FF',
+            },
+            fb: {
+              DEFAULT: '#1877F2',
+              hover: '#1462C9',
+              light: '#EEF5FF',
+            }
+          },
+          boxShadow: {
+            'card': '0 4px 20px -2px rgba(11, 122, 62, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
+            'zalo': '0 4px 12px -1px rgba(0, 104, 255, 0.28)',
+            'logo': '0 8px 24px -4px rgba(0, 0, 0, 0.18)',
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-green-50 via-slate-50 to-green-50/70 font-sans text-slate-800 antialiased selection:bg-brand-200 selection:text-brand-800">
+
+  <!-- Khung chứa chính: Chuẩn giao diện Mobile-First (tối đa 480px trên máy tính, tràn viền mượt mà trên điện thoại) -->
+  <div class="mx-auto flex min-h-screen w-full max-w-[480px] flex-col bg-slate-50 shadow-2xl shadow-green-900/10 sm:my-6 sm:min-h-[calc(100vh-3rem)] sm:overflow-hidden sm:rounded-[32px] sm:border sm:border-green-100">
+
+    <!-- ==================== PHẦN ĐẦU TRANG (HEADER) ==================== -->
+    <header class="relative overflow-hidden rounded-b-[32px] bg-gradient-to-br from-[#0b7a3e] via-[#117d3e] to-[#15803d] px-5 pb-7 pt-7 text-white shadow-lg shadow-brand-700/25">
+      <!-- Họa tiết trang trí nền nhẹ nhàng trùng tông xanh lá non của logo -->
+      <div class="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full bg-[#68b82e]/25 blur-2xl"></div>
+      <div class="pointer-events-none absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-white/10 blur-xl"></div>
+
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <!-- =================================================================
+             LOGO CÔNG TY
+             HƯỚNG DẪN KHI TẢI LÊN GITHUB PAGES:
+             Anh hãy tải file ảnh "logo_xnk-removebg-preview.png" lên CÙNG THƯ MỤC
+             với file "index.html" này (giữ nguyên tên file không đổi) để logo
+             tự động hiển thị sắc nét nhất nhé!
+             ================================================================= -->
+        <div class="mb-3.5 inline-flex items-center justify-center rounded-2xl bg-white px-5 py-2.5 shadow-logo ring-4 ring-white/20">
+          <img
+            src="logo_xnk-removebg-preview.png"
+            alt="Logo Công ty Cổ phần Xuất Nhập Khẩu Cao Bằng"
+            class="h-14 w-auto max-w-[160px] object-contain"
+            onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+          />
+          <!-- Hình dự phòng tự hiện khi xem thử nhanh (chưa có file ảnh cùng thư mục) -->
+          <div class="hidden flex items-center gap-1.5 px-1 py-1">
+            <span class="text-2xl font-black tracking-tight text-[#0b7a3e]">XNK</span>
+            <span class="rounded-md bg-[#68b82e]/15 px-1.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-[#0b7a3e]">Cao Bằng</span>
+          </div>
+        </div>
+
+        <!-- Tên Công ty -->
+        <h1 class="text-base font-extrabold uppercase leading-snug tracking-wide text-white drop-shadow-sm sm:text-[17px]">
+          CÔNG TY CỔ PHẦN<br />XUẤT NHẬP KHẨU CAO BẰNG
+        </h1>
+        <p class="mt-1 text-xs font-medium text-green-100 sm:text-sm">
+          Hệ thống Siêu thị &amp; Cửa hàng Tự chọn
+        </p>
+
+        <!-- Hộp Slogan nổi bật (Callout Box) -->
+        <div class="mt-4 flex w-full items-center justify-center gap-2.5 rounded-2xl border border-[#68b82e]/50 bg-white/15 px-4 py-3 backdrop-blur-md">
+          <!-- Chấm xanh lá non nhấp nháy tạo cảm giác ưu đãi đang diễn ra -->
+          <span class="relative flex h-3 w-3 shrink-0">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#a3e635] opacity-80"></span>
+            <span class="relative inline-flex h-3 w-3 rounded-full bg-[#68b82e] ring-2 ring-white/80"></span>
+          </span>
+          <p class="text-left text-[13px] font-bold leading-snug text-white sm:text-sm">
+            Vào nhóm Zalo gần nhất để săn deal sốc mỗi ngày
+          </p>
+        </div>
+
+        <!-- 3 Thẻ giá trị ưu đãi (Value-Prop Pills) -->
+        <div class="mt-3.5 flex flex-wrap items-center justify-center gap-2">
+          <span class="inline-flex items-center gap-1 rounded-full bg-[#68b82e]/30 px-3 py-1 text-[11px] font-semibold text-lime-100 ring-1 ring-inset ring-[#68b82e]/60">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-lime-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" />
+            </svg>
+            Deal sốc mỗi ngày
+          </span>
+          <span class="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold text-white ring-1 ring-inset ring-white/25">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-green-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Ưu đãi giờ vàng
+          </span>
+          <span class="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold text-white ring-1 ring-inset ring-white/25">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-green-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+            </svg>
+            Hàng tươi mới
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== NỘI DUNG CHÍNH ==================== -->
+    <main class="flex-1 px-4 pb-6 pt-5">
+
+      <!-- Thanh tìm kiếm & Bộ lọc nhanh -->
+      <section aria-label="Tìm kiếm và lọc cơ sở" class="mb-4 space-y-3">
+        <!-- Ô tìm kiếm -->
+        <div class="relative">
+          <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5 text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </div>
+          <input
+            id="searchInput"
+            type="text"
+            autocomplete="off"
+            placeholder="Tìm theo tên siêu thị hoặc xã/phường..."
+            class="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-11 pr-10 text-sm text-slate-800 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-brand-700 focus:ring-4 focus:ring-brand-700/15"
+          />
+          <!-- Nút xóa nhanh từ khóa -->
+          <button
+            id="clearSearchBtn"
+            type="button"
+            aria-label="Xóa từ khóa tìm kiếm"
+            class="absolute inset-y-0 right-0 hidden items-center pr-3.5 text-slate-400 transition hover:text-slate-600"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m15 9-6 6" />
+              <path d="m9 9 6 6" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Nút lọc nhanh theo loại hình (3 tab) -->
+        <div id="filterChips" class="flex flex-wrap gap-2" role="tablist" aria-label="Lọc theo loại cửa hàng">
+          <button
+            type="button"
+            data-filter="all"
+            class="filter-chip rounded-full bg-brand-700 px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition active:scale-95"
+          >
+            Tất cả (<span id="countAll">7</span>)
+          </button>
+          <button
+            type="button"
+            data-filter="sieuthi"
+            class="filter-chip rounded-full border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-600 transition hover:border-brand-700/40 hover:text-brand-700 active:scale-95"
+          >
+            Siêu thị (<span id="countSieuThi">5</span>)
+          </button>
+          <button
+            type="button"
+            data-filter="chtc"
+            class="filter-chip rounded-full border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-600 transition hover:border-brand-700/40 hover:text-brand-700 active:scale-95"
+          >
+            Cửa hàng tự chọn (<span id="countCHTC">2</span>)
+          </button>
+        </div>
+      </section>
+
+      <!-- Tiêu đề danh sách & Số lượng kết quả -->
+      <div class="mb-3 flex items-center justify-between px-1">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500">
+          Chọn cơ sở gần bạn nhất
+        </h2>
+        <span id="resultCountLabel" class="text-xs font-semibold text-brand-700">
+          Hiển thị 7 cơ sở
+        </span>
+      </div>
+
+      <!-- Danh sách các thẻ Siêu thị & Cửa hàng Tự chọn (được tạo tự động bằng JS) -->
+      <section id="storeList" class="space-y-3" aria-label="Danh sách các cơ sở"></section>
+
+      <!-- Trạng thái khi không tìm thấy kết quả -->
+      <div id="emptyState" class="hidden rounded-2xl border border-dashed border-slate-300 bg-white px-5 py-10 text-center">
+        <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-brand-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+        </div>
+        <p class="text-sm font-bold text-slate-700">Không tìm thấy cơ sở phù hợp</p>
+        <p class="mt-1 text-xs text-slate-500">Anh/chị thử nhập tên xã, phường hoặc siêu thị khác nhé.</p>
+        <button
+          id="resetFilterBtn"
+          type="button"
+          class="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-brand-700 px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-brand-800 active:scale-95"
+        >
+          Xem tất cả cơ sở
+        </button>
+      </div>
+    </main>
+
+    <!-- ==================== CHÂN TRANG GỌN GÀNG (FOOTER) ==================== -->
+    <footer class="mt-auto border-t border-slate-200/80 bg-white px-5 py-5 text-center">
+      <p class="text-xs font-bold uppercase tracking-wide text-brand-700">
+        Công ty Cổ phần Xuất Nhập Khẩu Cao Bằng
+      </p>
+
+      <!-- =================================================================
+           HƯỚNG DẪN SỬA SỐ HOTLINE:
+           Anh thay số điện thoại thật vào cả 2 chỗ:
+           1. Trong href="tel:02063850000" (viết liền không dấu cách)
+           2. Ở chữ hiển thị "Hotline hỗ trợ: 0206.385.0000" bên dưới
+           ================================================================= -->
+      <div class="mt-3 flex justify-center">
+        <a
+          href="tel:02063850000"
+          id="hotlineLink"
+          class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-brand-50 px-5 py-2.5 text-xs font-bold text-brand-700 transition hover:bg-brand-100 active:scale-95"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span>Hotline hỗ trợ: 0206.385.0000</span>
+        </a>
+      </div>
+
+      <!-- Bản quyền ngắn gọn -->
+      <p class="mt-3.5 text-[11px] font-medium text-slate-400">
+        &copy; 2026 Công ty CP Xuất Nhập Khẩu Cao Bằng. All rights reserved.
+      </p>
+    </footer>
+  </div>
+
+  <!-- ==================== THÔNG BÁO NỔI (TOAST NOTIFICATION) ==================== -->
+  <div
+    id="toast"
+    role="status"
+    aria-live="polite"
+    class="pointer-events-none fixed bottom-5 left-1/2 z-50 flex w-[calc(100%-2rem)] max-w-[420px] -translate-x-1/2 translate-y-4 items-center gap-2.5 rounded-2xl bg-slate-900/95 px-4 py-3 text-xs font-medium text-white opacity-0 shadow-xl backdrop-blur-md transition-all duration-300"
+  >
+    <span id="toastIcon" class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="16" x2="12" y2="12" />
+        <line x1="12" y1="8" x2="12.01" y2="8" />
+      </svg>
+    </span>
+    <span id="toastMessage" class="leading-snug"></span>
+  </div>
+
+  <!-- ==================== MÃ XỬ LÝ JAVASCRIPT ==================== -->
+  <script>
+    /**
+     * =========================================================================
+     * DANH SÁCH 7 CƠ SỞ — ANH CHỈ CẦN SỬA LINK ZALO & FACEBOOK Ở ĐÂY!
+     * =========================================================================
+     * HƯỚNG DẪN CẬP NHẬT LINK NHANH:
+     * 1. Tìm đúng tên cơ sở bên dưới.
+     * 2. Dán link Nhóm Zalo thật vào dòng `zaloLink` (ví dụ: "https://zalo.me/g/abc123").
+     * 3. Dán link Fanpage Facebook thật vào dòng `fbLink` (ví dụ: "https://facebook.com/sieuthingocxuan").
+     * 4. Nếu cơ sở nào chưa có link, anh có thể để trống "" — nút bấm sẽ hiện thông báo nhẹ.
+     * 5. Nhớ giữ nguyên dấu ngoặc kép "..." và dấu phẩy ở cuối dòng nhé!
+     */
+    const STORES = [
+      {
+        id: 1,
+        name: "Siêu thị Ngọc Xuân",
+        address: "Phường Nùng Trí Cao, Cao Bằng",
+        type: "sieuthi",
+        // 👇 Dán link Nhóm Zalo thật vào trong dấu ngoặc kép
+        zaloLink: "https://zalo.me/g/link-ngoc-xuan",
+        // 👇 Dán link Fanpage Facebook thật vào trong dấu ngoặc kép
+        fbLink: "https://facebook.com/link-fanpage-ngoc-xuan"
+      },
+      {
+        id: 2,
+        name: "Siêu thị Hòa An",
+        address: "Xã Nước Hai, Cao Bằng",
+        type: "sieuthi",
+        // 👇 Dán link Nhóm Zalo thật vào trong dấu ngoặc kép
+        zaloLink: "https://zalo.me/g/link-hoa-an",
+        // 👇 Dán link Fanpage Facebook thật vào trong dấu ngoặc kép
+        fbLink: "https://facebook.com/link-fanpage-hoa-an"
+      },
+      {
+        id: 3,
+        name: "Siêu thị Cao Bình",
+        address: "Phường Nùng Trí Cao, Cao Bằng",
+        type: "sieuthi",
+        // 👇 Dán link Nhóm Zalo thật vào trong dấu ngoặc kép
+        zaloLink: "https://zalo.me/g/link-cao-binh",
+        // 👇 Dán link Fanpage Facebook thật vào trong dấu ngoặc kép
+        fbLink: "https://facebook.com/link-fanpage-cao-binh"
+      },
+      {
+        id: 4,
+        name: "Siêu thị Thạch An",
+        address: "Xã Đông Khê, Cao Bằng",
+        type: "sieuthi",
+        // 👇 Dán link Nhóm Zalo thật vào trong dấu ngoặc kép
+        zaloLink: "https://zalo.me/g/link-thach-an",
+        // 👇 Dán link Fanpage Facebook thật vào trong dấu ngoặc kép
+        fbLink: "https://facebook.com/link-fanpage-thach-an"
+      },
+      {
+        id: 5,
+        name: "Siêu thị Trùng Khánh",
+        address: "Xã Trùng Khánh, Cao Bằng",
+        type: "sieuthi",
+        // 👇 Dán link Nhóm Zalo thật vào trong dấu ngoặc kép
+        zaloLink: "https://zalo.me/g/link-trung-khanh",
+        // 👇 Dán link Fanpage Facebook thật vào trong dấu ngoặc kép
+        fbLink: "https://facebook.com/link-fanpage-trung-khanh"
+      },
+      {
+        id: 6,
+        name: "CHTC NX1",
+        address: "Chợ KM5, Thục Phán, Cao Bằng",
+        type: "chtc",
+        // 👇 Dán link Nhóm Zalo thật vào trong dấu ngoặc kép
+        zaloLink: "https://zalo.me/g/link-chtc-nx1",
+        // 👇 Dán link Fanpage Facebook thật vào trong dấu ngoặc kép
+        fbLink: "https://facebook.com/link-fanpage-chtc-nx1"
+      },
+      {
+        id: 7,
+        name: "CHTC NX3",
+        address: "Xã Quảng Uyên, Cao Bằng",
+        type: "chtc",
+        // 👇 Dán link Nhóm Zalo thật vào trong dấu ngoặc kép
+        zaloLink: "https://zalo.me/g/link-chtc-nx3",
+        // 👇 Dán link Fanpage Facebook thật vào trong dấu ngoặc kép
+        fbLink: "https://facebook.com/link-fanpage-chtc-nx3"
+      }
+    ];
+
+    // Trạng thái bộ lọc hiện tại
+    let currentFilter = "all";
+    let currentQuery = "";
+    let toastTimer = null;
+
+    // Tham chiếu các phần tử DOM
+    const storeListEl = document.getElementById("storeList");
+    const emptyStateEl = document.getElementById("emptyState");
+    const searchInputEl = document.getElementById("searchInput");
+    const clearSearchBtn = document.getElementById("clearSearchBtn");
+    const resultCountLabel = document.getElementById("resultCountLabel");
+    const filterChipEls = document.querySelectorAll(".filter-chip");
+    const resetFilterBtn = document.getElementById("resetFilterBtn");
+    const hotlineLinkEl = document.getElementById("hotlineLink");
+    const toastEl = document.getElementById("toast");
+    const toastMessageEl = document.getElementById("toastMessage");
+
+    /**
+     * Chuẩn hóa tiếng Việt không dấu để hỗ trợ tìm kiếm nhanh (VD: "hoa an" -> "Hòa An")
+     */
+    function normalizeVietnamese(str) {
+      if (!str) return "";
+      return String(str)
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    /**
+     * Hiển thị thông báo nổi nhẹ nhàng thay cho alert()
+     */
+    function showToast(message) {
+      if (!toastEl || !toastMessageEl) return;
+      toastMessageEl.textContent = message;
+      toastEl.classList.remove("opacity-0", "translate-y-4");
+      toastEl.classList.add("opacity-100", "translate-y-0");
+
+      if (toastTimer) {
+        clearTimeout(toastTimer);
+      }
+      toastTimer = setTimeout(() => {
+        toastEl.classList.remove("opacity-100", "translate-y-0");
+        toastEl.classList.add("opacity-0", "translate-y-4");
+      }, 3200);
+    }
+
+    /**
+     * Cập nhật số lượng cơ sở trên các nút lọc nhanh
+     */
+    function updateCounts() {
+      const total = STORES.length;
+      const sieuThiCount = STORES.filter((s) => s.type === "sieuthi").length;
+      const chtcCount = STORES.filter((s) => s.type === "chtc").length;
+
+      const countAllEl = document.getElementById("countAll");
+      const countSieuThiEl = document.getElementById("countSieuThi");
+      const countCHTCEl = document.getElementById("countCHTC");
+
+      if (countAllEl) countAllEl.textContent = total;
+      if (countSieuThiEl) countSieuThiEl.textContent = sieuThiCount;
+      if (countCHTCEl) countCHTCEl.textContent = chtcCount;
+    }
+
+    /**
+     * Tạo mã HTML cho từng thẻ cơ sở với 2 nút bấm đặt cạnh nhau (Nhóm Zalo & Fanpage FB)
+     */
+    function createStoreCardHTML(store) {
+      const isSupermarket = store.type === "sieuthi";
+      const badgeLabel = isSupermarket ? "Siêu thị" : "Cửa hàng tự chọn";
+      const badgeClasses = isSupermarket
+        ? "bg-brand-100 text-brand-700 ring-brand-200"
+        : "bg-lime-100/80 text-brand-800 ring-[#68b82e]/40";
+
+      const safeZaloHref = store.zaloLink && store.zaloLink.trim() !== "" ? store.zaloLink.trim() : "#";
+      const safeFbHref = store.fbLink && store.fbLink.trim() !== "" ? store.fbLink.trim() : "#";
+
+      return `
+        <article class="group rounded-2xl border border-slate-100 bg-white p-4 shadow-card transition duration-200 hover:border-brand-200 hover:shadow-md">
+          <div class="flex items-start justify-between gap-3">
+            <div class="min-w-0 flex-1">
+              <!-- Nhãn phân loại -->
+              <div class="mb-1.5 flex items-center gap-2">
+                <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[11px] font-bold ring-1 ring-inset ${badgeClasses}">
+                  ${badgeLabel}
+                </span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-medium text-amber-600">
+                  <span class="h-1.5 w-1.5 rounded-full bg-[#68b82e]"></span>
+                  Deal mỗi ngày
+                </span>
+              </div>
+
+              <!-- Tên cơ sở -->
+              <h3 class="text-[15px] font-bold leading-snug text-slate-800 group-hover:text-brand-700">
+                ${store.name}
+              </h3>
+
+              <!-- Địa chỉ -->
+              <p class="mt-1 flex items-start gap-1.5 text-xs leading-relaxed text-slate-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>${store.address}</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 Nút bấm đặt cạnh nhau trên cùng 1 hàng (Nhóm Zalo & Fanpage FB) -->
+          <div class="mt-3.5 grid grid-cols-2 gap-2.5">
+            <!-- Nút trái: Nhóm Zalo -->
+            <a
+              href="${safeZaloHref}"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-channel="zalo"
+              data-link="${store.zaloLink || ""}"
+              class="store-action-btn flex items-center justify-center gap-1.5 rounded-xl bg-zalo px-3 py-3 text-[13px] font-bold text-white shadow-zalo transition duration-150 hover:bg-zalo-hover active:scale-[0.98]"
+            >
+              <!-- Biểu tượng Zalo SVG rõ nét -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.454 5.505 3.727 7.196L4.8 22l3.87-1.935c1.053.298 2.172.451 3.33.451 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2Z" fill="#FFFFFF" />
+                <path d="M8.5 8.5h7l-7 7h7" stroke="#0068FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>Nhóm Zalo</span>
+            </a>
+
+            <!-- Nút phải: Fanpage FB -->
+            <a
+              href="${safeFbHref}"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-channel="fb"
+              data-link="${store.fbLink || ""}"
+              class="store-action-btn flex items-center justify-center gap-1.5 rounded-xl border border-fb/35 bg-fb-light px-3 py-3 text-[13px] font-bold text-fb transition duration-150 hover:bg-fb hover:text-white active:scale-[0.98]"
+            >
+              <!-- Biểu tượng Facebook SVG rõ nét -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z" />
+              </svg>
+              <span>Fanpage FB</span>
+            </a>
+          </div>
+        </article>
+      `;
+    }
+
+    /**
+     * Lọc và hiển thị danh sách cơ sở lên màn hình
+     */
+    function renderStores() {
+      try {
+        const normalizedQuery = normalizeVietnamese(currentQuery);
+
+        const filtered = STORES.filter((store) => {
+          const matchesType = currentFilter === "all" || store.type === currentFilter;
+          if (!matchesType) return false;
+
+          if (!normalizedQuery) return true;
+
+          const typeText = store.type === "sieuthi" ? "sieu thi" : "cua hang tu chon chtc";
+          const searchableText = normalizeVietnamese(`${store.name} ${store.address} ${typeText}`);
+          return searchableText.includes(normalizedQuery);
+        });
+
+        if (resultCountLabel) {
+          resultCountLabel.textContent = `Hiển thị ${filtered.length} cơ sở`;
+        }
+
+        if (filtered.length === 0) {
+          storeListEl.innerHTML = "";
+          emptyStateEl.classList.remove("hidden");
+        } else {
+          emptyStateEl.classList.add("hidden");
+          storeListEl.innerHTML = filtered.map(createStoreCardHTML).join("");
+        }
+      } catch (err) {
+        console.error("Lỗi hiển thị danh sách cơ sở:", err);
+      }
+    }
+
+    /**
+     * Cập nhật giao diện nút lọc đang được chọn
+     */
+    function updateFilterChipStyles() {
+      filterChipEls.forEach((btn) => {
+        const isActive = btn.dataset.filter === currentFilter;
+        if (isActive) {
+          btn.className = "filter-chip rounded-full bg-brand-700 px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition active:scale-95";
+        } else {
+          btn.className = "filter-chip rounded-full border border-slate-200 bg-white px-3.5 py-2 text-xs font-semibold text-slate-600 transition hover:border-brand-700/40 hover:text-brand-700 active:scale-95";
+        }
+      });
+    }
+
+    // ==================== GẮN SỰ KIỆN TƯƠNG TÁC ====================
+
+    // 1. Tìm kiếm trực tiếp theo từ khóa
+    if (searchInputEl) {
+      searchInputEl.addEventListener("input", (e) => {
+        currentQuery = e.target.value;
+        if (clearSearchBtn) {
+          if (currentQuery.trim().length > 0) {
+            clearSearchBtn.classList.remove("hidden");
+            clearSearchBtn.classList.add("flex");
+          } else {
+            clearSearchBtn.classList.add("hidden");
+            clearSearchBtn.classList.remove("flex");
+          }
+        }
+        renderStores();
+      });
+    }
+
+    // 2. Xóa nhanh từ khóa tìm kiếm
+    if (clearSearchBtn) {
+      clearSearchBtn.addEventListener("click", () => {
+        currentQuery = "";
+        if (searchInputEl) {
+          searchInputEl.value = "";
+          searchInputEl.focus();
+        }
+        clearSearchBtn.classList.add("hidden");
+        clearSearchBtn.classList.remove("flex");
+        renderStores();
+      });
+    }
+
+    // 3. Chuyển đổi bộ lọc (Tất cả / Siêu thị / Cửa hàng tự chọn)
+    filterChipEls.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        currentFilter = btn.dataset.filter || "all";
+        updateFilterChipStyles();
+        renderStores();
+      });
+    });
+
+    // 4. Đặt lại bộ lọc khi không tìm thấy kết quả
+    if (resetFilterBtn) {
+      resetFilterBtn.addEventListener("click", () => {
+        currentFilter = "all";
+        currentQuery = "";
+        if (searchInputEl) searchInputEl.value = "";
+        if (clearSearchBtn) {
+          clearSearchBtn.classList.add("hidden");
+          clearSearchBtn.classList.remove("flex");
+        }
+        updateFilterChipStyles();
+        renderStores();
+      });
+    }
+
+    // 5. Xử lý khi bấm nút "Nhóm Zalo" hoặc "Fanpage FB"
+    // - Nếu anh để trống link ("") -> hiện thông báo thân thiện, không mở trang lỗi
+    // - Nếu vẫn là link mẫu (chứa "link-") -> nhắc cập nhật nhẹ
+    if (storeListEl) {
+      storeListEl.addEventListener("click", (e) => {
+        const actionBtn = e.target.closest(".store-action-btn");
+        if (!actionBtn) return;
+
+        const link = (actionBtn.getAttribute("data-link") || "").trim();
+        const channel = actionBtn.getAttribute("data-channel");
+        const channelLabel = channel === "zalo" ? "Nhóm Zalo" : "Fanpage Facebook";
+
+        if (!link) {
+          e.preventDefault();
+          showToast(`${channelLabel} của cơ sở này đang được cập nhật. Quý khách vui lòng quay lại sau nhé!`);
+          return;
+        }
+
+        if (link.includes("link-")) {
+          showToast(`Đang mở link ${channelLabel} mẫu — Anh nhớ dán link thật trong mục STORES nhé!`);
+        }
+      });
+    }
+
+    // 6. Xử lý khi bấm nút Hotline mẫu ở chân trang
+    if (hotlineLinkEl) {
+      hotlineLinkEl.addEventListener("click", (e) => {
+        const href = hotlineLinkEl.getAttribute("href") || "";
+        if (href === "tel:02063850000") {
+          e.preventDefault();
+          showToast("Số Hotline mẫu — Anh thay bằng số điện thoại thật ở phần Footer nhé!");
+        }
+      });
+    }
+
+    // Khởi chạy lần đầu khi tải trang
+    updateCounts();
+    renderStores();
+  </script>
+</body>
+</html>
